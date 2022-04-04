@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+   
+    background-size: cover;
+    animation: changeColor 2s linear infinite;
+    background-image: url('../img/Hinh-anh-Sai-Gon-dep-lung-ve-dem.jpg');
+}
+@keyframes changeColor{
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(45deg);
+    }
+}
+.container::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/rain.png');
+    animation:  changeRain 0.2s linear infinite;
+}
+
+@keyframes changeRain{
+    0%{
+        background-position:  0 0;
+    }
+    100%{
+        background-position:  20% 100%;
+    }
+}
